@@ -10,24 +10,28 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            login open_login = new login();
-            open_login.Show();
-            this.Hide();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            txt_pw.Clear();
+            txt_un.Clear();
 
         }
     }
