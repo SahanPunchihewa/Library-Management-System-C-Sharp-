@@ -34,5 +34,12 @@ namespace WindowsFormsApp2
             txt_un.Clear();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            register open_register = new register();
+            open_register.Show();
+            this.Hide();
+        }
     }
 }
