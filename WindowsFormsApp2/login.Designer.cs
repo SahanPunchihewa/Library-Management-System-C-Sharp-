@@ -80,18 +80,16 @@
             // 
             this.txt_un.Location = new System.Drawing.Point(273, 259);
             this.txt_un.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txt_un.Multiline = true;
             this.txt_un.Name = "txt_un";
-            this.txt_un.Size = new System.Drawing.Size(265, 36);
+            this.txt_un.Size = new System.Drawing.Size(265, 22);
             this.txt_un.TabIndex = 2;
             // 
             // txt_pw
             // 
             this.txt_pw.Location = new System.Drawing.Point(273, 385);
             this.txt_pw.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txt_pw.Multiline = true;
             this.txt_pw.Name = "txt_pw";
-            this.txt_pw.Size = new System.Drawing.Size(268, 36);
+            this.txt_pw.Size = new System.Drawing.Size(268, 22);
             this.txt_pw.TabIndex = 3;
             this.txt_pw.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
