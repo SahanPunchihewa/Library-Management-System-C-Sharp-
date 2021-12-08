@@ -25,6 +25,22 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
 
+            string user = txt_un.Text;
+            string password = txt_pw.Text;
+
+            if (user == "admin" && password == "admin123")
+            {
+
+                MessageBox.Show("Login Sucessfull");
+                dashboard open_dashboard = new dashboard();
+                open_dashboard.Show();
+                this.Hide();
+            }
+            else
+            {
+
+                MessageBox.Show("Login Unsuccessfull");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,12 +50,6 @@ namespace WindowsFormsApp2
             txt_un.Clear();
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            register open_register = new register();
-            open_register.Show();
-            this.Hide();
-        }
+        
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class register : Form
+    public partial class dashboard : Form
     {
-        public register()
+        public dashboard()
         {
             InitializeComponent();
         }

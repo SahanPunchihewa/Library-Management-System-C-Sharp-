@@ -31,11 +31,6 @@ namespace WindowsFormsApp2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            register open_register = new register();
-            open_register.Show();
-            this.Hide();
-        }
+      
     }
 }
