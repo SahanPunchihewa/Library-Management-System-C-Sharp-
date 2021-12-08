@@ -50,6 +50,10 @@ namespace WindowsFormsApp2
             txt_un.Clear();
 
         }
-        
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
