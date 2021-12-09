@@ -32,8 +32,8 @@ namespace WindowsFormsApp2
             {
 
                 MessageBox.Show("Login Sucessfull");
-                dashboard open_dashboard = new dashboard();
-                open_dashboard.Show();
+                menu open_menu = new menu();
+                open_menu.Show();
                 this.Hide();
             }
             else

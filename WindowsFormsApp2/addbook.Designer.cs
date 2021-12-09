@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class dashboard
+    partial class addbook
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addbook));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Book";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -127,9 +128,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(331, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 32);
+            this.label1.Size = new System.Drawing.Size(144, 32);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Dashboard";
+            this.label1.Text = "Add Book";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -221,7 +222,7 @@
             this.txt_author.Size = new System.Drawing.Size(206, 20);
             this.txt_author.TabIndex = 16;
             // 
-            // dashboard
+            // addbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +245,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "dashboard";
+            this.Name = "addbook";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
