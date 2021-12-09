@@ -20,6 +20,43 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Update Code Here
+
+
+            try
+            {
+
+                string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
+
+                string query = "UPDATE `book` SET `id` = '" + this.txt_id.Text + "', `name` = '" + this.txt_name.Text + "', `title` ='" + this.txt_title.Text + "', `category`= '" + this.txt_category.Text + "', `author`= '" + this.txt_author.Text + "' WHERE `id`= '" + this.txt_id.Text + "'";
+                MySqlConnection Myconn = new MySqlConnection(MyConnection);
+                MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
+                MySqlDataReader MyReader;
+                Myconn.Open();
+                MyReader = Mycommand.ExecuteReader();
+                MessageBox.Show("Book Successfully Updated");
+                while (MyReader.Read())
+
+                txt_id.Text = "";
+                txt_name.Text = "";
+                txt_title.Text = "";
+                txt_category.Text = "";
+                txt_author.Text = "";
+
+                Myconn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
 
         }
 
@@ -61,13 +98,13 @@ namespace WindowsFormsApp2
 
             string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
 
-            string query = "INSERT INTO `book` (`id`, `name`, `title`, `category`, `author`) VALUES ('" + this.txt_id.Text + "', '" + this.txt_name.Text + "', '" + this.txt_title.Text + "', '" + this.txt_category.Text + "', '" + this.txt_author.Text + "');";
+            string query = "INSERT INTO `book` (`id`, `name`, `title`, `category`, `author`) VALUES ('"+this.txt_id.Text + "', '" + this.txt_name.Text + "', '" + this.txt_title.Text + "', '" + this.txt_category.Text + "', '" + this.txt_author.Text + "');";
             MySqlConnection Myconn = new MySqlConnection(MyConnection);
             MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
             MySqlDataReader MyReader;
             Myconn.Open();
             MyReader = Mycommand.ExecuteReader();
-            MessageBox.Show("Registration Sucessful", "Registration", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            MessageBox.Show("Book Added Sucessfully", "Registration", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
             txt_id.Text = "";
             txt_name.Text = "";
@@ -89,5 +126,48 @@ namespace WindowsFormsApp2
 
 
 }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            // View Code Here
+
+            try
+            {
+
+                if (txt_id.Text != "")
+                {
+
+                    string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
+                    string query = "SELECT * FROM `book` WHERE id= '"+txt_id.Text + "'";
+                    MySqlConnection Myconn = new MySqlConnection(MyConnection);
+                    MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
+                    MySqlDataReader MyReader;
+                    Myconn.Open();
+                    MyReader = Mycommand.ExecuteReader();
+                    Myconn.Close();
+                    MySqlDataAdapter adp = new MySqlDataAdapter(Mycommand);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+
+                    txt_name.Text = dt.Rows[0][1].ToString();
+                    txt_title.Text = dt.Rows[0][2].ToString();
+                    txt_category.Text = dt.Rows[0][3].ToString();
+                    txt_author.Text = dt.Rows[0][4].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Enter Value for ID");
+                }
+
+            }
+            catch
+            {
+
+                MessageBox.Show("Error");
+            }
+
+
+        }
     }
 }
