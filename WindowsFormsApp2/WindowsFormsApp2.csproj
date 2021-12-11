@@ -55,6 +55,12 @@
     <Compile Include="addbook.Designer.cs">
       <DependentUpon>addbook.cs</DependentUpon>
     </Compile>
+    <Compile Include="addmember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addmember.Designer.cs">
+      <DependentUpon>addmember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="addbook.resx">
       <DependentUpon>addbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addmember.resx">
+      <DependentUpon>addmember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
