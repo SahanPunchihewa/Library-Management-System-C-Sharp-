@@ -62,6 +62,43 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
+            // Delete Code 
+
+            try
+            {
+
+                string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
+                string query = "DELETE FROM `book` WHERE id = '" + this.txt_id.Text + "'";
+
+                MySqlConnection Myconn = new MySqlConnection(MyConnection);
+                MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
+                MySqlDataReader MyReader;
+                Myconn.Open();
+                MyReader = Mycommand.ExecuteReader();
+                MessageBox.Show("Book Successfully Deleted");
+
+                txt_id.Text = "";
+                txt_name.Text = "";
+                txt_title.Text = "";
+                txt_category.Text = "";
+                txt_author.Text = "";
+
+
+
+
+                Myconn.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
 
         }
 
