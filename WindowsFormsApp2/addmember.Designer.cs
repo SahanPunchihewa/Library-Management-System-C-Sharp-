@@ -119,10 +119,10 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(215, 368);
+            this.button1.Location = new System.Drawing.Point(167, 368);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 38);
+            this.button1.Size = new System.Drawing.Size(120, 38);
             this.button1.TabIndex = 10;
             this.button1.Text = "Add ";
             this.button1.UseVisualStyleBackColor = false;
@@ -131,35 +131,38 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SpringGreen;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(338, 368);
+            this.button2.Location = new System.Drawing.Point(316, 368);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 38);
+            this.button2.Size = new System.Drawing.Size(108, 38);
             this.button2.TabIndex = 11;
-            this.button2.Text = "View";
+            this.button2.Text = "View ";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(463, 368);
+            this.button3.Location = new System.Drawing.Point(465, 368);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 38);
+            this.button3.Size = new System.Drawing.Size(129, 38);
             this.button3.TabIndex = 12;
             this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(593, 368);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(623, 368);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(111, 38);
             this.button4.TabIndex = 13;
             this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // txt_mid
             // 
