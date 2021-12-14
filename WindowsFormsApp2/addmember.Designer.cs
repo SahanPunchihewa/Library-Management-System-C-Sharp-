@@ -44,6 +44,7 @@
             this.txt_mage = new System.Windows.Forms.TextBox();
             this.txt_maddress = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -210,11 +211,22 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(359, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 32);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Add Member";
+            // 
             // addmember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 389);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.txt_maddress);
             this.Controls.Add(this.txt_mage);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.TextBox txt_mage;
         private System.Windows.Forms.TextBox txt_maddress;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label5;
     }
 }
