@@ -133,7 +133,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
             this.Text = "menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

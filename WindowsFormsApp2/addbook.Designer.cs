@@ -46,6 +46,7 @@
             this.txt_title = new System.Windows.Forms.TextBox();
             this.txt_category = new System.Windows.Forms.TextBox();
             this.txt_author = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(126, 405);
+            this.button1.Location = new System.Drawing.Point(225, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 46);
             this.button1.TabIndex = 0;
@@ -68,7 +69,7 @@
             this.button2.BackColor = System.Drawing.Color.SpringGreen;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(303, 405);
+            this.button2.Location = new System.Drawing.Point(366, 405);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 46);
             this.button2.TabIndex = 1;
@@ -81,7 +82,7 @@
             this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(474, 405);
+            this.button3.Location = new System.Drawing.Point(503, 405);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 46);
             this.button3.TabIndex = 2;
@@ -223,11 +224,25 @@
             this.txt_author.Size = new System.Drawing.Size(206, 20);
             this.txt_author.TabIndex = 16;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(81, 405);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(109, 46);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "<< Back";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // addbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 503);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.txt_author);
             this.Controls.Add(this.txt_category);
             this.Controls.Add(this.txt_title);
@@ -245,7 +260,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addbook";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -274,5 +288,6 @@
         private System.Windows.Forms.TextBox txt_title;
         private System.Windows.Forms.TextBox txt_category;
         private System.Windows.Forms.TextBox txt_author;
+        private System.Windows.Forms.Button button6;
     }
 }

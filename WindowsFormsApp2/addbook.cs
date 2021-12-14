@@ -206,5 +206,12 @@ namespace WindowsFormsApp2
 
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            menu open_menu = new menu();
+            open_menu.Show();
+            this.Hide();
+        }
     }
 }

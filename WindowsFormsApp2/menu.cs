@@ -31,7 +31,9 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            addmember open_addmemeber = new addmember();
+            open_addmemeber.Show();
+            this.Hide();
         }
     }
 }
