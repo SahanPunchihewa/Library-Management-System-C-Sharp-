@@ -113,7 +113,7 @@ namespace WindowsFormsApp2
 
                 string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
 
-                string query = "UPDATE `member` SET `mid` = '" + this.txt_mid.Text + "', `mname` = '" + this.txt_mname.Text + "', `mage` ='" + this.txt_mage.Text + "', `maddress`= '" + this.txt_maddress.Text + "' WHERE `id`= '" + this.txt_mid.Text + "'";
+                string query = "UPDATE `member` SET `mid` = '" + this.txt_mid.Text + "', `mname` = '" + this.txt_mname.Text + "', `mage` ='" + this.txt_mage.Text + "', `maddress`= '" + this.txt_maddress.Text + "' WHERE `mid`= '" + this.txt_mid.Text + "'";
                 MySqlConnection Myconn = new MySqlConnection(MyConnection);
                 MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
                 MySqlDataReader MyReader;
