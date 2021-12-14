@@ -138,5 +138,43 @@ namespace WindowsFormsApp2
             }
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            // Delete Member
+
+            try
+            {
+
+                string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
+                string query = "DELETE FROM `member` WHERE mid = '" + this.txt_mid.Text + "'";
+
+                MySqlConnection Myconn = new MySqlConnection(MyConnection);
+                MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
+                MySqlDataReader MyReader;
+                Myconn.Open();
+                MyReader = Mycommand.ExecuteReader();
+                MessageBox.Show("Member Successfully Deleted!");
+
+                txt_mid.Text = "";
+                txt_mname.Text = "";
+                txt_mage.Text = "";
+                txt_maddress.Text = "";
+
+
+
+
+                Myconn.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
