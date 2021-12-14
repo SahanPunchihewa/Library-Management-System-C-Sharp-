@@ -25,6 +25,7 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // add Member
 
             try
             {
@@ -37,7 +38,7 @@ namespace WindowsFormsApp2
                 MySqlDataReader MyReader;
                 Myconn.Open();
                 MyReader = Mycommand.ExecuteReader();
-                MessageBox.Show("Registration Sucessful", "Registration", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                MessageBox.Show("Member Registration Successful!");
 
                 txt_mid.Text = "";
                 txt_mname.Text = "";
@@ -100,7 +101,40 @@ namespace WindowsFormsApp2
             catch
             {
 
-                MessageBox.Show("Error");
+                MessageBox.Show("Error!");
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string MyConnection = "server=localhost; userId=root; password=; database=librarysystem";
+
+                string query = "UPDATE `member` SET `mid` = '" + this.txt_mid.Text + "', `mname` = '" + this.txt_mname.Text + "', `mage` ='" + this.txt_mage.Text + "', `maddress`= '" + this.txt_maddress.Text + "' WHERE `id`= '" + this.txt_mid.Text + "'";
+                MySqlConnection Myconn = new MySqlConnection(MyConnection);
+                MySqlCommand Mycommand = new MySqlCommand(query, Myconn);
+                MySqlDataReader MyReader;
+                Myconn.Open();
+                MyReader = Mycommand.ExecuteReader();
+                MessageBox.Show("Member Details Successfully Updated!");
+                while (MyReader.Read())
+
+                txt_mid.Text = "";
+                txt_mname.Text = "";
+                txt_mage.Text = "";
+                txt_maddress.Text = "";
+
+                Myconn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
 
         }

@@ -34,7 +34,7 @@ namespace WindowsFormsApp2
                 MySqlDataReader MyReader;
                 Myconn.Open();
                 MyReader = Mycommand.ExecuteReader();
-                MessageBox.Show("Book Successfully Updated");
+                MessageBox.Show("Book Successfully Updated!");
                 while (MyReader.Read())
 
                 txt_id.Text = "";
@@ -75,7 +75,7 @@ namespace WindowsFormsApp2
                 MySqlDataReader MyReader;
                 Myconn.Open();
                 MyReader = Mycommand.ExecuteReader();
-                MessageBox.Show("Book Successfully Deleted");
+                MessageBox.Show("Book Successfully Deleted!");
 
                 txt_id.Text = "";
                 txt_name.Text = "";
@@ -141,7 +141,7 @@ namespace WindowsFormsApp2
             MySqlDataReader MyReader;
             Myconn.Open();
             MyReader = Mycommand.ExecuteReader();
-            MessageBox.Show("Book Added Sucessfully", "Registration", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            MessageBox.Show("Book Added Successful!");
 
             txt_id.Text = "";
             txt_name.Text = "";
